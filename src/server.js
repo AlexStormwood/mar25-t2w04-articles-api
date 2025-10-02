@@ -46,7 +46,8 @@ app.get("/databaseHealth", (request, response) => {
 
 
 
-
+const userRouter = require("./controllers/users/UserRoutes.js");
+app.use("/users", userRouter);
 
 
 
