@@ -1,0 +1,9 @@
+{
+  "version": "1",
+  "name": "MAR25 Express Articles API",
+  "type": "collection",
+  "ignore": [
+    "node_modules",
+    ".git"
+  ]
+}

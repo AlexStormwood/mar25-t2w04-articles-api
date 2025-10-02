@@ -1,4 +1,5 @@
 const express = require("express");
+const { updateOneUser } = require("./UserFunctions");
 const router = express.Router();
 
 /*
@@ -50,14 +51,19 @@ router.post("/one", async (request, response) => {
 	});
 });
 
-router.patch("/one", async (request, response) => {
+router.patch("/one/:targetUserId", async (request, response) => {
+	//								user id from params,		 new data from request.body as JSON 
+	let result = await updateOneUser(request.params.targetUserId, request.body);
+
+	// let result = await updateOneUser(request.body.targetUserId, request.body.newData);
+	// let result = await updateOneUser(request.body.query, request.body.newData);
 
 	response.json({
-		message:"Not yet implemented!"
+		result: result
 	});
 });
 
-router.delete("/one", async (request, response) => {
+router.delete("/one/:targetUserId", async (request, response) => {
 
 	response.json({
 		message:"Not yet implemented!"
