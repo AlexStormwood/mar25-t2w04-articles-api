@@ -5,9 +5,23 @@ meta {
 }
 
 patch {
-  url: http://localhost:3000/users/one
-  body: none
+  url: http://localhost:3000/users/one/aoisdjnaolfnaslvkns
+  body: json
   auth: inherit
+}
+
+body:json {
+  {
+    "newData":{
+      "password":"SomeNewPassword1"
+    },
+    "targetUserId":"oaksndcalkfnav",
+    "query":{
+      "_id":"oaijscl;aknfa",
+      "username":"some username here",
+      "password":"paknmfalkfnas"
+    }
+  }
 }
 
 settings {
